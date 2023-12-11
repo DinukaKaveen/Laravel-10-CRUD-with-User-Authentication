@@ -10,7 +10,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
 
-                    <form class="max-w-sm mx-auto">
+                    <form class="max-w-sm mx-auto" method="POST" action="{{route('product.edit_product')}}">
                         <div class="mb-5">
                             <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Name</label>
                             <input type="text" id="name"
