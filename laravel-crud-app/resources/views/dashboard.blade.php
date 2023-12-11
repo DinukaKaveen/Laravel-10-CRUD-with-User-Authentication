@@ -28,6 +28,9 @@
                                     <th scope="col" class="px-6 py-3">
                                         Price
                                     </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Action
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,6 +48,10 @@
                                     <td class="px-6 py-4">
                                         $2999
                                     </td>
+                                    <td class="px-6 py-4">
+                                        <a href="#"
+                                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                    </td>
                                 </tr>
                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                     <th scope="row"
@@ -60,6 +67,10 @@
                                     <td class="px-6 py-4">
                                         $1999
                                     </td>
+                                    <td class="px-6 py-4">
+                                        <a href="#"
+                                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                    </td>
                                 </tr>
                                 <tr class="bg-white dark:bg-gray-800">
                                     <th scope="row"
@@ -74,6 +85,10 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         $99
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <a href="#"
+                                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                     </td>
                                 </tr>
                             </tbody>
