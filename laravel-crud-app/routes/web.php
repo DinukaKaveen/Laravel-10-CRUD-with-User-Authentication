@@ -28,10 +28,16 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/products', [ProductController::class, 'get_products'])->name('product.get');
-    Route::post('/create_product', [ProductController::class, 'create_product'])->name('product.create');
-    Route::put('/edit_product', [ProductController::class, 'edit_product'])->name('product.edit');
-    Route::delete('/delete_product', [ProductController::class, 'delete_product'])->name('product.delete');
+    //product page routes
+    Route::get('/products', [ProductController::class, 'products'])->name('product.get');
+    Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
+    Route::get('/product/edit', [ProductController::class, 'edit'])->name('product.edit');
+
+    //product routes
+    Route::get('/get_products', [ProductController::class, 'get_products'])->name('product.get_products');
+    Route::post('/create_product', [ProductController::class, 'create_product'])->name('product.create_product');
+    Route::put('/edit_product', [ProductController::class, 'edit_product'])->name('product.edit_product');
+    Route::delete('/delete_product', [ProductController::class, 'delete_product'])->name('product.delete_product');
 });
 
 require __DIR__.'/auth.php';
