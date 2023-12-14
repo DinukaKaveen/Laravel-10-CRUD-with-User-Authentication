@@ -9,7 +9,9 @@ class ProductController extends Controller
     {
     public function products()
         {
-        return view('products.products');
+        $products = Product::all();
+        //dd($products);
+        return view('dashboard', ['products' => $products]);
         }
 
     public function create()
