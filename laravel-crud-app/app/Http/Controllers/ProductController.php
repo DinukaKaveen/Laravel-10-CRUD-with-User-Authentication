@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductController extends Controller
     {
@@ -20,4 +21,19 @@ class ProductController extends Controller
         {
         return view('products.editProduct');
         }
+
+    public function create_product(Request $request)
+        {
+        //dd($request);
+        $data = $request->validate([
+            'name' => 'required',
+            'qty' => 'required|numeric',
+            'price' => 'required|decimal:0,2'
+        ]);      
+
+        Product::create($data);
+
+        return redirect(route('dashboard'));
+        }
+
     }
