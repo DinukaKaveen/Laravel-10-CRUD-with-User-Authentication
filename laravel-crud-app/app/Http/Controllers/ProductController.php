@@ -49,7 +49,7 @@ class ProductController extends Controller
 
         $product->update($data);
 
-        return redirect(route('dashboard'));
+        return redirect(route('dashboard'))->with('success', 'Product Updated Successfully');
         }
 
     }
