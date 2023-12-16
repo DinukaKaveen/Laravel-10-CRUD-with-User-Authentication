@@ -19,21 +19,35 @@ class ProductController extends Controller
         return view('products.createProduct');
         }
 
-    public function edit()
+    public function edit(Product $product)
         {
-        return view('products.editProduct');
+        //dd($product)
+        return view('products.editProduct', ['product' => $product]);
         }
 
     public function create_product(Request $request)
         {
         //dd($request);
         $data = $request->validate([
-            'name' => 'required',
-            'qty' => 'required|numeric',
+            'name'  => 'required',
+            'qty'   => 'required|numeric',
             'price' => 'required|decimal:0,2'
-        ]);      
+        ]);
 
         Product::create($data);
+
+        return redirect(route('dashboard'));
+        }
+
+    public function edit_product(Product $product, Request $request)
+        {
+        $data = $request->validate([
+            'name'  => 'required',
+            'qty'   => 'required|numeric',
+            'price' => 'required|decimal:0,2'
+        ]);
+
+        $product->update($data);
 
         return redirect(route('dashboard'));
         }
