@@ -22,7 +22,7 @@ class ProductController extends Controller
     public function edit(Product $product)
         {
         //dd($product);
-        return view('products.editProduct', ['product' => $product]);
+        return view('products.editProduct', ['editProduct' => $product]);
         }
 
 /**************************************************************************************************************************/
