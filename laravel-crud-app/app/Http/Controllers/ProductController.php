@@ -36,7 +36,7 @@ class ProductController extends Controller
 
         Product::create($data);
 
-        return redirect(route('dashboard'));
+        return redirect(route('dashboard'))->with('success', 'Product Created Successfully');
         }
 
     public function edit_product(Product $product, Request $request)
@@ -50,6 +50,13 @@ class ProductController extends Controller
         $product->update($data);
 
         return redirect(route('dashboard'))->with('success', 'Product Updated Successfully');
+        }
+
+    public function delete_product(Product $product, Request $request)
+        {
+        //dd($product);
+        $product->delete();
+        return redirect(route('dashboard'))->with('success', 'Product Deleted Successfully');
         }
 
     }

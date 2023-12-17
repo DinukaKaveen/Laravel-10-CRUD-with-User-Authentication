@@ -52,6 +52,12 @@
                                     <td class="px-6 py-4">
                                         <a href="{{ route('product.edit', ['product' => $product]) }}"
                                             class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                            
+                                        <form method="POST" action="{{ route('product.delete_product', ['product' => $product]) }}">
+                                            @csrf
+                                            @method('delete')
+                                            <input type="submit" value="Delete" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
