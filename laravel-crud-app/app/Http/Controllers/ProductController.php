@@ -25,6 +25,8 @@ class ProductController extends Controller
         return view('products.editProduct', ['product' => $product]);
         }
 
+/**************************************************************************************************************************/
+
     public function create_product(Request $request)
         {
         //dd($request);
